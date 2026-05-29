@@ -112,7 +112,7 @@ public class EntityOperator extends AbstractModel {
 
             EntityTopicOperator topicOperator = EntityTopicOperator.fromCrd(reconciliation, kafkaAssembly, sharedEnvironmentProvider, config);
             EntityUserOperator userOperator = EntityUserOperator.fromCrd(reconciliation, kafkaAssembly, sharedEnvironmentProvider, config);
-            
+
             result.topicOperator = topicOperator;
             result.cruiseControlEnabled = kafkaAssembly.getSpec().getCruiseControl() != null;
             result.userOperator = userOperator;
